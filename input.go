@@ -7,7 +7,7 @@ import (
 func input(marker_type string) {
 	var column int
 	for {
-		fmt.Println("Введите номер колонки(от 1 до 7) куда хотите поставить фишку")
+		fmt.Printf("Введите номер колонки(от 1 до 7) куда хотите поставить фишку: ")
 		fmt.Scan(&column)
 		if column < 1 || column > 7 {
 			fmt.Println("Введено недопустимое значение")
@@ -37,7 +37,7 @@ func check_progress(column int, marker_type string) int {
 	var s = 5
 
 	for i := 5; i >= 0; i-- {
-		if boardArr[i][column] != "[ ]" {
+		if boardArr[i][column] != "[  ]" {
 			n += 1
 		}
 	}
